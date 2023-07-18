@@ -28,9 +28,17 @@
       background-color: var(--light-gray);
     }
 
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+    }
+
     .component-box {
       display: flex;
       justify-content: center;
+      align-content: center;
     }
 
     .component {
@@ -71,19 +79,21 @@
 </head>
 
 <body>
-  <div class="component-box">
-    <div class="component">
-      <div class="component-image">
-        <img src="/qr-code-component-main/images/image-qr-code.png">
-      </div>
-      <div class="component-text">
-        <h1>Improve your front-end skills by building projects</h1>
-        <p>Scan the QE code to visit Frontend Mentor and take your coding skills to the next level</p>
+  <div class="content">
+    <div class="component-box">
+      <div class="component">
+        <div class="component-image">
+          <img src="/qr-code-component-main/images/image-qr-code.png">
+        </div>
+        <div class="component-text">
+          <h1>Improve your front-end skills by building projects</h1>
+          <p>Scan the QE code to visit Frontend Mentor and take your coding skills to the next level</p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="attribution">
-    Coded by <a href="#">Derion Williams</a>.
+    <div class="attribution">
+      Coded by <a href="#">Derion Williams</a>.
+    </div>
   </div>
 </body>
 
