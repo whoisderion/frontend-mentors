@@ -1,28 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | QR code component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>Derion's QR code component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    body {
+      margin: 0;
+      line-height: 1.5;
+      font-family: "Outfit", sans-serif;
+      font-size: 15px;
+      --light-gray: hsl(212, 45%, 89%);
+      --grayish-blue: hsl(220, 15%, 55%);
+      --dark-blue: hsl(218, 44%, 22%);
+
+      background-color: var(--light-gray);
+    }
+
+    .component-box {
+      display: flex;
+      justify-content: center;
+    }
+
+    .component {
+      background-color: white;
+      max-width: 375px;
+      border-radius: 25px;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .component-image {
+      display: inline-block;
+    }
+
+    .component-image img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 25px;
+    }
+
+    .component-text {
+      text-align: center;
+      padding: 10px;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
-
-  Improve your front-end skills by building projects
-
-  Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
-  
+  <div class="component-box">
+    <div class="component">
+      <div class="component-image">
+        <img src="/qr-code-component-main/images/image-qr-code.png">
+      </div>
+      <div class="component-text">
+        <h1>Improve your front-end skills by building projects</h1>
+        <p>Scan the QE code to visit Frontend Mentor and take your coding skills to the next level</p>
+      </div>
+    </div>
+  </div>
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Derion Williams</a>.
   </div>
 </body>
+
 </html>
