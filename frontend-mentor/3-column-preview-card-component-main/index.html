@@ -28,6 +28,8 @@
       margin-right: 20px;
       color: var(--very-light-gray);
       font-size: 15px;
+      justify-content: center;
+      align-items: center;
     }
 
     h1 {
@@ -39,11 +41,13 @@
     }
 
     .card {
+      margin: auto;
       height: 300px;
       padding: 50px;
       padding-right: 60px;
       display: flex;
       flex-direction: column;
+      max-width: 545px;
     }
 
     #first {
@@ -61,6 +65,30 @@
       border-bottom-right-radius: 15px;
       border-bottom-left-radius: 15px;
     }
+
+    @media only screen and (min-width: 913px) {
+
+      .body {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .card {
+        display: inline-flex;
+        width: 20vw;
+        max-width: 545px;
+        margin: -2px;
+      }
+
+      #first {
+        border-radius: 15px 0px 0px 15px;
+      }
+
+      #third {
+        border-radius: 0px 15px 15px 0px;
+      }
+    }
+
 
     .card img {
       max-width: 55px;
@@ -90,6 +118,8 @@
     .attribution {
       font-size: 11px;
       text-align: center;
+      max-width: 90vw;
+      margin: 0px;
     }
 
     .attribution a {
