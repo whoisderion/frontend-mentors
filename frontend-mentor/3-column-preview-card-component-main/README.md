@@ -25,12 +25,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./images/Desktop%20Screenshot.png)
+![](./images/Mobile%20Screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://www.frontendmentor.io/solutions/responsive-3-card-preview-component-MsHq18aYYJ
+- Live Site URL: https://derion-3-column-preview-card.netlify.app/
 
 ### Built with
 
