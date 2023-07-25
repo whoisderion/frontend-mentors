@@ -1,1 +1,70 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1rem;
+  font-size: 16px;
+}
+body h1, body h2, body form {
+  font-family: "Raleway";
+  font-weight: 700;
+}
+body p {
+  font-family: "Open Sans";
+  font-weight: 400;
+}
+body header {
+  font-family: "Raleway";
+  font-weight: 400;
+}
+body header img {
+  width: 20%;
+}
+body header ul {
+  list-style-type: none;
+  display: flex;
+  float: right;
+  width: 60%;
+  justify-content: space-between;
+}
+body main img {
+  max-width: 100%;
+}
+body main .content h2 {
+  margin: 2rem 0rem;
+  font-size: 1rem;
+  text-align: center;
+}
+body main .content p {
+  margin-top: 1rem;
+}
+body main .content form {
+  margin: 2rem 0.5rem;
+}
+body main .content form input {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  height: 2.5rem;
+}
+body main .content form input[type=text] {
+  padding: 1rem;
+}
+body main .content div a {
+  text-align: center;
+}
+body main .hero {
+  margin-top: 4rem;
+}
+body main .hero .content {
+  text-align: center;
+}
+body main .hero .content h1 {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+}/*# sourceMappingURL=style.css.map */
