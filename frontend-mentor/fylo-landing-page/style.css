@@ -32,6 +32,20 @@
 * body header {
   margin: 1rem;
 }
+@media only screen and (min-width: 992px) {
+  * body header {
+    margin: 3rem 5rem;
+  }
+}
+* body header img {
+  width: 25%;
+  max-width: 125px;
+}
+* body header ul {
+  max-width: 250px;
+  float: right;
+  justify-content: space-between;
+}
 * body main img {
   max-width: 100%;
 }
@@ -46,6 +60,12 @@
 * body main .content .see-more {
   text-align: center;
   margin: 3rem auto;
+}
+@media only screen and (min-width: 992px) {
+  * body main .content .see-more {
+    margin: 1rem 0rem;
+    text-align: left;
+  }
 }
 * body main .content .see-more a {
   text-decoration: none;
@@ -89,30 +109,63 @@
   font-size: 1.5rem;
   line-height: 2.25rem;
 }
+* body main .row {
+  background-color: #f6f6fe;
+  padding: 2rem 1rem;
+}
+* body main .row a {
+  color: #3f9b8b;
+}
+* body main .row a div {
+  display: inline-flex;
+  align-items: center;
+}
+* body main .row a div img {
+  width: 0.9rem;
+  margin-left: 0.5rem;
+}
+* body main .row a div p {
+  margin: 0px;
+}
+@media only screen and (min-width: 992px) {
+  * body main .row a div p {
+    padding-right: 7rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  * body main .hero, * body main .row {
+    padding: 3rem 3rem;
+    display: flex;
+    margin-top: 0px;
+  }
+  * body main .hero .illustration, * body main .row .illustration {
+    order: 2;
+    padding: 1rem;
+    width: 70vw;
+  }
+  * body main .hero .content, * body main .row .content {
+    margin: auto;
+    text-align: left;
+  }
+  * body main .hero .content h1, * body main .row .content h1 {
+    margin: 0px;
+  }
+  * body main .hero .content form, * body main .row .content form {
+    width: 85%;
+    margin: 0px;
+    display: inline-flex;
+  }
+  * body main .hero .content form input[type=text], * body main .row .content form input[type=text] {
+    margin-right: 1rem;
+  }
+}
 * body main .bg-curve {
   margin-bottom: -5px;
   width: 100%;
 }
-* body main div[class=row] {
-  background-color: #f6f6fe;
-  padding: 2rem 1rem;
-}
-* body main div[class=row] a {
-  color: #3f9b8b;
-}
-* body main div[class=row] a div {
-  display: inline-flex;
-  align-items: center;
-}
-* body main div[class=row] a div img {
-  width: 0.9rem;
-  margin-left: 0.5rem;
-}
-* body main div[class=row] a div p {
-  margin: 0px;
-}
 * body main .testimonial {
   width: 88%;
+  max-width: 300px;
   box-shadow: 0px 0px 5px #bfbfbf;
   margin: 2rem auto;
   padding: 1.5rem;
@@ -139,6 +192,11 @@
 }
 * body main .testimonial .testimonial-info h5 {
   font-size: 0.5rem;
+}
+@media only screen and (min-width: 992px) {
+  * body main .testimonial {
+    margin: 2rem 0rem;
+  }
 }
 * body main .access-cta {
   background-color: #585989;

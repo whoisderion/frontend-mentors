@@ -14,6 +14,8 @@
     $light-gray: #bfbfbf
     $bluish-green: #3f9b8b
 
+    $desktop: 992px
+
     body
         font-size: 16px
         h1, h2, h3, form
@@ -34,6 +36,15 @@
                 justify-content: space-between
         header
             margin: 1rem
+            @media only screen and (min-width: $desktop)
+                margin: 3rem 5rem
+            img
+                width: 25%
+                max-width: 125px
+            ul
+                max-width: 250px
+                float: right
+                justify-content: space-between
         main
             // margin: 1rem
             img
@@ -48,6 +59,9 @@
                 .see-more
                     text-align: center
                     margin: 3rem auto
+                    @media only screen and (min-width: $desktop)
+                        margin: 1rem 0rem
+                        text-align: left
                     a
                         text-decoration: none
                         border-bottom: 1px solid
@@ -78,10 +92,7 @@
                         margin-top: 3rem
                         font-size: 1.5rem
                         line-height: 2.25rem
-            .bg-curve
-                margin-bottom: -5px
-                width: 100%
-            div[class="row"]
+            .row
                 background-color: $light-grayish-blue
                 padding: 2rem 1rem
                 a
@@ -94,8 +105,34 @@
                             margin-left: .5rem
                         p
                             margin: 0px
+                            @media only screen and (min-width: $desktop)
+                                padding-right: 7rem
+            .hero, .row
+                @media only screen and (min-width: $desktop)
+                    padding: 3rem 3rem
+                    display: flex
+                    margin-top: 0px
+                    .illustration
+                        order: 2
+                        padding: 1rem
+                        width: 70vw
+                    .content
+                        margin: auto
+                        text-align: left
+                        h1
+                            margin: 0px
+                        form
+                            width: 85%
+                            margin: 0px
+                            display: inline-flex
+                            input[type="text"]
+                                margin-right: 1rem
+            .bg-curve
+                margin-bottom: -5px
+                width: 100%
             .testimonial
                 width: 88%
+                max-width: 300px
                 box-shadow: 0px 0px 5px $light-gray
                 margin: 2rem auto
                 padding: 1.5rem
@@ -117,6 +154,8 @@
                         margin-bottom: .25rem
                     h5
                         font-size: .5rem
+                @media only screen and (min-width: $desktop)
+                    margin: 2rem 0rem
             .access-cta
                 background-color: $desaturated-blue
                 padding: 3rem 1rem
