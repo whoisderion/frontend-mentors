@@ -1,52 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    * {
+      margin: 0;
+    }
+
+    body {
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img,
+    picture,
+    video,
+    canvas,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    input,
+    button,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      overflow-wrap: break-word;
+    }
+
+    #root,
+    #__next {
+      isolation: isolate;
+    }
+
+    @font-face {
+      font-family: "Roboto";
+      src:
+        url("/assets/fonts/Roboto-Regular.ttf");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Roboto";
+      src:
+        url("/assets/fonts/Roboto-Bold.ttf");
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    :root {
+      --main-color: #222443;
+      color: var(--main-color);
+    }
+
+    h1,
+    h2,
+    h3,
+    button {
+      color: var(--main-color);
+      font-family: 'Roboto';
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p,
+    input {
+      color: var(--main-color);
+      font-family: 'Roboto';
+    }
+
+    .illustration img {
+      width: 100vw;
+    }
+
+    section {
+      margin: 1rem 2rem 1rem 1rem
+    }
+
+    ul {
+      list-style-type: disc;
+      list-style-image: url(/assets/images/icon-list.svg);
+      padding-inline-start: 1.25rem;
+      margin-left: .25rem;
+    }
+
+    ul li {
+      margin-top: .75rem;
+      padding-left: .5rem;
+    }
+
+    ul li p {
+      position: relative;
+      top: -5px;
+    }
+
+    #email-input {
+      margin: 1rem
+    }
+
+    h3 {
+      font-size: .75rem;
+    }
+
+    input {
+      margin-top: .25rem;
+      margin-bottom: 1rem;
+      height: 2.5rem;
+      padding: 1.25rem;
+      width: 100%;
+      border-radius: .5rem;
+      border-width: .5px;
+    }
+
+    #email-input {
+      margin-top: 2rem;
+    }
+
+    button {
+      background-color: var(--main-color);
+      color: white;
+      padding: 1rem;
+      border-radius: .5rem;
+      border-style: none;
+      width: 100%;
+      text-align: center;
+    }
+
+    .modal {
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #222443;
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      padding: 20px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .modal-content img {
+      height: 4.5rem;
+      margin: 2rem 0;
+    }
+
+    .modal-content h2 {
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .modal-content button {
+      position: absolute;
+      bottom: 3rem;
+      width: 90%;
+    }
+
+    @media (min-width: 768px) {
+      body {
+        background-color: #222443;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .signup {
+        display: flex;
+        width: 60vw;
+        height: 60vh;
+        min-height: 500px;
+        margin: 0 20vw;
+        padding: 1rem;
+        background-color: #fefefe;
+        border-radius: 1.5rem;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .illustration {
+        width: 45%;
+        height: 100%;
+      }
+
+      .illustration img {
+        height: 100%;
+        object-fit: cover;
+        border-radius: 1rem;
+      }
+
+      .signup-contents {
+        width: 50%;
+      }
+
+      .modal {
+        display: flex;
+        align-items: center;
+      }
+
+      .modal-content {
+        border-radius: 1rem;
+        padding: 60px;
+        width: 500px;
+        height: 520px;
+      }
+
+      .modal-content img {
+        margin: 0 0 2rem 0;
+      }
+
+      .modal-content h2 {
+        font-size: 3.25rem;
+        line-height: normal;
+      }
+
+      .modal-content button {
+        width: 100%;
+        position: inherit;
+        margin-top: 2rem;
+      }
+
+      .modal,
+      .modal-content {
+        display: none;
+      }
+    }
   </style>
+  <script>
+
+  </script>
 </head>
+
 <body>
+  <div class="container">
+    <div class="signup">
 
-  <!-- Sign-up form start -->
+      <!-- Sign-up form start -->
 
-  Stay updated!
+      <div class="illustration">
+        <img src="assets/images/illustration-sign-up-mobile.svg" alt="Sing Up Illustration">
+      </div>
+      <div class="signup-contents">
+        <section>
+          <h1>Stay updated!</h1>
 
-  Join 60,000+ product managers receiving monthly updates on:
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
 
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
+          <ul>
+            <li>
+              <img src="" alt="">
+              <p>Product discovery and building what matters</p>
+            </li>
+            <li>
+              <img src="" alt="">
+              <p>Measuring to ensure updates are a success</p>
+            </li>
+            <li>
+              <img src="" alt="">
+              <p>And much more!</p>
+            </li>
+          </ul>
+        </section>
 
-  Email address
-  email@company.com
+        <div id="email-input">
+          <h3>Email address</h3>
+          <input type="text" name="" id="" placeholder="email@company.com">
 
-  Subscribe to monthly newsletter
+          <button>Subscribe to monthly newsletter</button>
+        </div>
+      </div>
+    </div>
 
-  <!-- Sign-up form end -->
+    <!-- Sign-up form end -->
 
-  <!-- Success message start -->
+    <!-- Success message start -->
 
-  Thanks for subscribing!
+    <div class="modal">
 
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
+      <div class="modal-content">
 
-  Dismiss message
+        <img src="/assets/images/icon-list.svg" alt="">
 
-  <!-- Success message end -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+        <div id="success-text">
+
+          <h2>Thanks for subscribing!</h2>
+
+          <p>A confirmation email has been sent to <b>ash@loremcompany.com</b>.
+            Please open it and click the button inside to confirm your subscription.</p>
+
+        </div>
+
+        <button class="close-modal">Dismiss message</button>
+      </div>
+    </div>
+    <!-- Success message end -->
   </div>
+
 </body>
+
 </html>
